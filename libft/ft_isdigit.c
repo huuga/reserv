@@ -6,11 +6,11 @@
 /*   By: rlacresh <rlacresh@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/13 19:04:25 by rlacresh          #+#    #+#             */
-/*   Updated: 2021/04/16 17:25:50 by rlacresh         ###   ########.fr       */
+/*   Updated: 2021/04/17 20:28:07 by rlacresh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_isdigit(int c)
+int	ft_isdigit(int c)
 {
 	if (c >= 48 && c <= 57)
 		return (1);

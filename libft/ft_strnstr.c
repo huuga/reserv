@@ -6,13 +6,13 @@
 /*   By: rlacresh <rlacresh@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/12 23:46:00 by rlacresh          #+#    #+#             */
-/*   Updated: 2021/04/17 18:57:48 by rlacresh         ###   ########.fr       */
+/*   Updated: 2021/04/17 20:39:22 by rlacresh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-static	size_t		ft_strlen(const char *str)
+static	size_t	ft_strlen(const char *str)
 {
 	size_t		len;
 
@@ -25,7 +25,7 @@ static	size_t		ft_strlen(const char *str)
 	return (len);
 }
 
-static	int		compare_needle(const char *haystack, const char *needle,
+static	int	compare_needle(const char *haystack, const char *needle,
 							size_t needle_size, size_t *len)
 {
 	while ((*haystack || *needle) && needle_size)
@@ -48,7 +48,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	size_t	needle_size;
 
 	if (*needle == '\0')
-		return ((char *)haystack);	
+		return ((char *)haystack);
 	needle_start = (char *)needle;
 	needle_size = ft_strlen(needle);
 	while (*haystack && len)

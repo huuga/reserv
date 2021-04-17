@@ -6,7 +6,7 @@
 /*   By: rlacresh <rlacresh@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/07 09:08:36 by rlacresh          #+#    #+#             */
-/*   Updated: 2021/04/17 19:06:36 by rlacresh         ###   ########.fr       */
+/*   Updated: 2021/04/17 20:13:09 by rlacresh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,6 @@ void	*ft_memchr(const void *s, int c, size_t n)
 		}
 		s++;
 		n--;
-	}	
+	}
 	return (NULL);
 }

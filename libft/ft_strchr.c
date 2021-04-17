@@ -6,16 +6,16 @@
 /*   By: rlacresh <rlacresh@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/12 22:35:12 by rlacresh          #+#    #+#             */
-/*   Updated: 2021/04/17 18:51:38 by rlacresh         ###   ########.fr       */
+/*   Updated: 2021/04/17 20:34:31 by rlacresh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
 //locate character in string
-char *ft_strchr(const char *str, int c)
+char	*ft_strchr(const char *str, int c)
 {
-	char ch;
+	char	ch;
 
 	ch = c;
 	while (*str)

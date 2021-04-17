@@ -6,11 +6,11 @@
 /*   By: rlacresh <rlacresh@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/13 19:37:55 by rlacresh          #+#    #+#             */
-/*   Updated: 2021/04/13 19:37:55 by rlacresh         ###   ########.fr       */
+/*   Updated: 2021/04/17 20:40:51 by rlacresh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_toupper(int c)
+int	ft_toupper(int c)
 {
 	if (c >= 97 && c <= 122)
 		return (c - 32);

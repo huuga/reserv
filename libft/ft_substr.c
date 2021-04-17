@@ -6,7 +6,7 @@
 /*   By: rlacresh <rlacresh@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/16 08:08:59 by rlacresh          #+#    #+#             */
-/*   Updated: 2021/04/17 17:38:07 by rlacresh         ###   ########.fr       */
+/*   Updated: 2021/04/17 20:13:15 by rlacresh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	result = (char *)malloc(len * sizeof(char) + 1);
 	if (result == NULL)
-		return (NULL);
+		return (NULL);	
 	result_copy = result;
 	if (*(s + start))
 	{

@@ -6,14 +6,14 @@
 /*   By: rlacresh <rlacresh@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/13 18:50:01 by rlacresh          #+#    #+#             */
-/*   Updated: 2021/04/16 16:22:56 by rlacresh         ###   ########.fr       */
+/*   Updated: 2021/04/17 20:27:08 by rlacresh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_isalpha(int c)
+int	ft_isalpha(int c)
 {
-	if ((c >= 65 && c <= 90) ||
-		(c >= 97 && c <= 122))
+	if ((c >= 65 && c <= 90)
+		|| (c >= 97 && c <= 122))
 		return (1);
 	else
 		return (0);

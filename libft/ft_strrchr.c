@@ -6,7 +6,7 @@
 /*   By: rlacresh <rlacresh@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/12 22:47:15 by rlacresh          #+#    #+#             */
-/*   Updated: 2021/04/17 18:54:34 by rlacresh         ###   ########.fr       */
+/*   Updated: 2021/04/17 20:39:54 by rlacresh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,10 @@ static	size_t	ft_strlen(const char *str)
 	return (len);
 }
 
-char *ft_strrchr(const char *str, int c)
+char	*ft_strrchr(const char *str, int c)
 {
-	char ch;
-	size_t ssize;
+	char	ch;
+	size_t	ssize;
 
 	ch = c;
 	ssize = ft_strlen(str);

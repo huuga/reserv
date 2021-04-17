@@ -6,11 +6,11 @@
 /*   By: rlacresh <rlacresh@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/13 19:18:54 by rlacresh          #+#    #+#             */
-/*   Updated: 2021/04/13 19:18:54 by rlacresh         ###   ########.fr       */
+/*   Updated: 2021/04/17 20:27:30 by rlacresh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_isascii(int c)
+int	ft_isascii(int c)
 {
 	if (c >= 0 && c <= 127)
 		return (1);

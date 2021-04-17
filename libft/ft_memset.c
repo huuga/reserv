@@ -6,7 +6,7 @@
 /*   By: rlacresh <rlacresh@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/07 09:09:17 by rlacresh          #+#    #+#             */
-/*   Updated: 2021/04/17 12:15:20 by rlacresh         ###   ########.fr       */
+/*   Updated: 2021/04/17 20:32:27 by rlacresh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 void	*ft_memset(void *des, int c, size_t n)
 {
-	unsigned char 	*str;
+	unsigned char	*str;
 
 	str = des;
-	while(n--)
+	while (n--)
 		*str++ = c;
 	return (des);
 }

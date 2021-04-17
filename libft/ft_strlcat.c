@@ -6,13 +6,13 @@
 /*   By: rlacresh <rlacresh@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/11 19:12:33 by rlacresh          #+#    #+#             */
-/*   Updated: 2021/04/17 18:48:08 by rlacresh         ###   ########.fr       */
+/*   Updated: 2021/04/17 20:37:01 by rlacresh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-static	size_t		ft_strlen(const char *str)
+static	size_t	ft_strlen(const char *str)
 {
 	size_t		len;
 
@@ -25,12 +25,12 @@ static	size_t		ft_strlen(const char *str)
 	return (len);
 }
 
-size_t 		ft_strlcat(char *dst, const char *src, size_t dsize)
+size_t 	ft_strlcat(char *dst, const char *src, size_t dsize)
 {
-	char *dst_copy;
-	char *src_copy;
-	size_t n;
-	size_t dlen;
+	char	*dst_copy;
+	char	*src_copy;
+	size_t	n;
+	size_t	dlen;
 
 	dst_copy = (char *)dst;
 	src_copy = (char *)src;
@@ -40,7 +40,7 @@ size_t 		ft_strlcat(char *dst, const char *src, size_t dsize)
 	dlen = dst - dst_copy;
 	n = dsize - dlen;
 	if (n-- == 0)
-		return(dlen + ft_strlen(src));
+		return (dlen + ft_strlen(src));
 	while (*src != '\0')
 	{
 		if (n != 0)

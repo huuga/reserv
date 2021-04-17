@@ -6,11 +6,11 @@
 /*   By: rlacresh <rlacresh@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/13 19:32:28 by rlacresh          #+#    #+#             */
-/*   Updated: 2021/04/16 17:26:44 by rlacresh         ###   ########.fr       */
+/*   Updated: 2021/04/17 20:28:14 by rlacresh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_isprint(int c)
+int	ft_isprint(int c)
 {
 	if (c >= 32 && c <= 126)
 		return (1);

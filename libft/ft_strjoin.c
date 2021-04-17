@@ -6,25 +6,25 @@
 /*   By: rlacresh <rlacresh@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/16 08:23:52 by rlacresh          #+#    #+#             */
-/*   Updated: 2021/04/17 17:43:32 by rlacresh         ###   ########.fr       */
+/*   Updated: 2021/04/17 20:36:18 by rlacresh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-static	void *ft_memcpy(void *dest, void *src, size_t n)
+static	void	*ft_memcpy(void *dest, void *src, size_t n)
 {
-	char *dest_copy;
+	char	*dest_copy;
 
 	if (dest == NULL && src == NULL)
 		return (NULL);
 	dest_copy = dest;
-	while(n--)
+	while (n--)
 		*dest_copy++ = *(char *)src++;
 	return (dest);
 }
 
-static	size_t		ft_strlen(char *str)
+static size_t	ft_strlen(char *str)
 {
 	size_t		len;
 
@@ -39,9 +39,9 @@ static	size_t		ft_strlen(char *str)
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	size_t s1_len;
-	size_t s2_len;
-	char *result;
+	size_t	s1_len;
+	size_t	s2_len;
+	char	*result;
 
 	if (s1 == NULL || s2 == NULL)
 		return (NULL);

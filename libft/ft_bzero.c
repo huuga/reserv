@@ -6,7 +6,7 @@
 /*   By: rlacresh <rlacresh@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/07 09:08:01 by rlacresh          #+#    #+#             */
-/*   Updated: 2021/04/17 13:46:40 by rlacresh         ###   ########.fr       */
+/*   Updated: 2021/04/17 20:16:21 by rlacresh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_bzero(void *des, size_t n)
 {
-	unsigned char *d;
+	unsigned char	*d;
 
 	d = des;
 	while (n--)
