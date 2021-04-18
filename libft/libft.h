@@ -6,14 +6,14 @@
 /*   By: rlacresh <rlacresh@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/07 09:09:51 by rlacresh          #+#    #+#             */
-/*   Updated: 2021/04/17 19:07:34 by rlacresh         ###   ########.fr       */
+/*   Updated: 2021/04/18 15:03:50 by rlacresh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <unistd.h>
-#include <stdlib.h>
-#include <stdio.h>
+#ifndef LIBFT_H
+# define LIBFT_H
+
+# include <string.h>
 
 size_t		ft_strlen(const char *str);
 void		*ft_memset(void *des, int c, size_t n);
@@ -38,8 +38,10 @@ int			ft_isascii(int c);
 int			ft_isprint(int c);
 int			ft_toupper(int c);
 int			ft_tolower(int c);
-void        *ft_calloc(size_t count, size_t size);
+void		*ft_calloc(size_t count, size_t size);
 char		*ft_substr(char const *s, unsigned int start, size_t len);
 char		*ft_strjoin(char const *s1, char const *s2);
 char		*ft_strtrim(char const *s1, char const *set);
 char		**ft_split(char const *s, char c);
+
+#endif

@@ -6,11 +6,11 @@
 /*   By: rlacresh <rlacresh@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/13 16:21:37 by rlacresh          #+#    #+#             */
-/*   Updated: 2021/04/17 20:38:27 by rlacresh         ###   ########.fr       */
+/*   Updated: 2021/04/18 12:54:48 by rlacresh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include <string.h>
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {

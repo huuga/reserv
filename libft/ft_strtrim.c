@@ -6,15 +6,15 @@
 /*   By: rlacresh <rlacresh@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/16 09:28:47 by rlacresh          #+#    #+#             */
-/*   Updated: 2021/04/17 15:37:04 by rlacresh         ###   ########.fr       */
+/*   Updated: 2021/04/18 19:48:45 by rlacresh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-static	size_t		ft_strlen(char *str)
+static size_t	ft_strlen(const char *str)
 {
-	size_t		len;
+	size_t	len;
 
 	len = 0;
 	while (*str)
@@ -25,77 +25,62 @@ static	size_t		ft_strlen(char *str)
 	return (len);
 }
 
-static	char    *ft_strdup(char *src)
+static char	*ft_strndup(const char *src, size_t n)
 {
-	char    *result;
-	char    *result_copy;
+	char	*result;
+	char	*result_copy;
 
-	result = (char *)malloc(sizeof(char) * ft_strlen(src) + 1);
+	result = (char *)malloc(sizeof(char) * n + 1);
 	if (result == NULL)
 		return (NULL);
 	result_copy = result;
-	while(*src)
+	while (n)
 	{
 		*result = *src;
 		result++;
 		src++;
+		n--;
 	}
 	*result = 0;
 	return (result_copy);
 }
 
-char	*cut_left(char const *s1, char const *set)
+static int	is_ch_in_str(const char *set, int c)
 {
-	char *result;
-
-	result = NULL;
-	while (*s1 && *set)
+	while (*set)
 	{
-		if (*s1 != *set)
-			return (NULL);
-		s1++;
+		if (*set == c)
+			return (1);
 		set++;
 	}
-	if (*s1 != 0)
-	{
-		if ((result = ft_strdup((char *)s1)) == NULL)
-			return (NULL);    
-	}	
-	return (result);
+	return (0);
 }
 
-
-
-// char	*cut_right(char *s2, char const *set)
-// {
-// 	char		*result;
-// 	size_t		set_len;
-// 	size_t		s2_len;
-
-// 	result = NULL;
-// 	set_len = ft_strlen((char *)set);
-// 	s2_len = ft_strlen(s2);
-// 	s2 += s2_len;
-// 	while (set_len > 0)
-// 	{
-// 		if (*s2 == *set)
-// 			if (ft_strcmp(s2, set) == 0)
-// 			{
-				
-// 			}
-// 		s2--;
-// 		set_len--;
-// 	}
-
-// }
-
-char    *ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	char	*s2;
+	size_t	s1_len;
+	size_t	set_len;
+	char	*left;
+	char	*right;
+	size_t	diff;
 
-	if ((s2 = cut_left(s1, set)) == NULL)
+	if (s1 == NULL)
 		return (NULL);
-	//if ((s3 = cut_right(s2, set)) == NULL)
-		return (NULL);
-	
+	s1_len = ft_strlen(s1);
+	set_len = ft_strlen(set);
+	left = (char *)s1;
+	right = (char *)s1 + s1_len - 1;
+	while (is_ch_in_str(set, *left))
+		left++;
+	if (*left != '\0')
+	{
+		while (is_ch_in_str(set, *right) && s1_len > 1)
+		{
+			right--;
+			s1_len--;
+		}
+		diff = right - left + 1;
+		return (ft_strndup(left, diff));
+	}
+	return (ft_strndup(left, ft_strlen(left)));
 }

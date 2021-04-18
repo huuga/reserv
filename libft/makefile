@@ -17,8 +17,6 @@
 # ${NAME}:	${OBJS}
 
 SOURCES = ${wildcard *.c}
-all:
-	gcc -Wall -Wextra -Werror ${SOURCES}
 
 libft:
 	gcc -Wall -Wextra -Werror -c ${SOURCES}

@@ -6,7 +6,7 @@
 /*   By: rlacresh <rlacresh@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/07 09:08:36 by rlacresh          #+#    #+#             */
-/*   Updated: 2021/04/17 20:13:09 by rlacresh         ###   ########.fr       */
+/*   Updated: 2021/04/18 11:01:39 by rlacresh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	{
 		if (*(char *)s == f)
 		{
-			return((void *)s);
+			return ((void *)s);
 		}
 		s++;
 		n--;
