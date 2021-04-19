@@ -12,12 +12,28 @@
 
 #include <stdlib.h>
 
-static int	int_mod(int n)
+static void	copier(int n, char *result)
 {
-	if (n < 0)
-		return (-n);
+	if (n > 0)
+	{
+		while (n > 0)
+		{
+			*result++ = (n % 10) + 48;
+			n = n / 10;
+		}
+	}
+	else if (n < 0)
+	{
+		while (n < 0)
+		{
+			*result++ = -(n % 10)  + 48;
+			n = n / 10;
+		}
+		*result++ = '-';
+	}
 	else
-		return (n);
+		*result++ = '0';
+	*result = 0;
 }
 
 static	int	ft_strlen(char *str)
@@ -50,14 +66,10 @@ static void	strrev(char *res)
 	}
 }
 
-static unsigned int	size_of_int(int n, int *flag)
+static unsigned int	size_of_int(int n)
 {
 	unsigned int	k;
 
-	if (n == -2147483648)
-		return (11);
-	if (n == 0)
-		return (1);
 	k = 0;
 	if (n > 0)
 	{
@@ -68,9 +80,8 @@ static unsigned int	size_of_int(int n, int *flag)
 		}
 		return (k);
 	}
-	else
+	else if (n < 0)
 	{
-		*flag = -(*flag);
 		while (n < 0)
 		{
 			n = n / 10;
@@ -78,36 +89,20 @@ static unsigned int	size_of_int(int n, int *flag)
 		}
 		return (k + 1);
 	}
+	else
+		return (1);
 }
 
 char	*ft_itoa(int n)
 {
 	char			*result;
-	char			*result_copy;
 	unsigned int	n_size;
-	int				flag;
 
-	flag = 1;
-	n_size = size_of_int(n, &flag);
+	n_size = size_of_int(n);
 	result = (char *)malloc(n_size * sizeof(char) + 1);
 	if (result == NULL)
 		return (NULL);
-	result_copy = result;
-	n = int_mod(n);
-	if (n == 0)
-	{
-		*result++ = '0';
-		*result = 0;
-		return (result_copy);
-	}
-	while (n > 0)
-	{
-		*result++ = (n % 10) + 48;
-		n = n / 10;
-	}
-	if (flag < 0)
-		*result++ = '-';
-	*result = 0;
-	strrev(result_copy);
-	return (result_copy);
+	copier(n, result);
+	strrev(result);
+	return (result);
 }

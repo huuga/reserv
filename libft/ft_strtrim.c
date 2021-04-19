@@ -59,7 +59,7 @@ static int	is_ch_in_str(const char *set, int c)
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	s1_len;
-	size_t	set_len;
+	//size_t	set_len;
 	char	*left;
 	char	*right;
 	size_t	diff;
@@ -67,7 +67,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	if (s1 == NULL)
 		return (NULL);
 	s1_len = ft_strlen(s1);
-	set_len = ft_strlen(set);
+	//set_len = ft_strlen(set);
 	left = (char *)s1;
 	right = (char *)s1 + s1_len - 1;
 	while (is_ch_in_str(set, *left))
